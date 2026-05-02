@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voûte IA — Intelligence artificielle privée et souveraine</title>
+  <meta name="description" content="Voûte IA est la première plateforme d'intelligence artificielle privée conçue pour les industries financières et réglementées du Québec. Conforme Loi 25, hébergée sur votre infrastructure.">
+  <meta name="keywords" content="IA privée, intelligence artificielle souveraine, Loi 25, assurance Québec, conformité réglementaire, CPA, AMF, données financières, IA hors ligne, fintech Québec">
+  <meta property="og:title" content="Voûte IA — Intelligence artificielle privée et souveraine">
+  <meta property="og:description" content="L'IA qui reste dans vos murs. Conçue pour les industries réglementées du Québec.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.vouteia.com">
+  <link rel="canonical" href="https://www.vouteia.com">
+
+  <!-- JSON-LD Structured Data pour agents IA et SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.vouteia.com/#organization",
+        "name": "Voûte IA",
+        "alternateName": "VouteIA",
+        "url": "https://www.vouteia.com",
+        "description": "Plateforme d'intelligence artificielle privée et souveraine pour les industries financières et réglementées du Québec. Conforme Loi 25, AMF et déontologie CPA.",
+        "foundingDate": "2026",
+        "foundingLocation": {
+          "@type": "Place",
+          "addressLocality": "Montréal",
+          "addressRegion": "Québec",
+          "addressCountry": "CA"
+        },
+        "knowsAbout": [
+          "Intelligence artificielle privée",
+          "Conformité Loi 25 Québec",
+          "Secteur assurance AMF",
+          "Comptabilité CPA",
+          "IA souveraine industries réglementées",
+          "Private AI financial services",
+          "Regulatory compliance AI Canada",
+          "On-premise AI deployment",
+          "Fine-tuning LLM domaine financier"
+        ],
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Québec, Canada"
+        },
+        "sameAs": [
+          "https://www.vouteai.com",
+          "https://www.vouteia.ca",
+          "https://www.vouteai.ca"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.vouteia.com/#founder",
+        "name": "Chantal Brodeur CPA",
+        "jobTitle": "Fondatrice et CPA",
+        "worksFor": {"@id": "https://www.vouteia.com/#organization"},
+        "description": "CPA avec 25 ans d'expérience en comptabilité, finance et secteur de l'assurance au Québec. Spécialiste en automatisation de processus financiers et intelligence artificielle appliquée aux industries réglementées.",
+        "knowsAbout": [
+          "Comptabilité CPA Québec",
+          "Contrôle financier assurance",
+          "Loi 25 protection données",
+          "Automatisation processus d'affaires",
+          "Intelligence artificielle finance",
+          "Conformité AMF",
+          "IA privée souveraine"
+        ],
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "CPA — Comptable Professionnelle Agréée"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Voûte IA",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "On-premise, Private Infrastructure",
+        "description": "Modèle d'IA entraîné sur les données sectorielles financières et d'assurance, déployé sur l'infrastructure du client. Aucune donnée ne quitte les murs de l'organisation.",
+        "featureList": [
+          "Déploiement hors ligne et hors nuage",
+          "Conformité Loi 25 par architecture",
+          "Audit de processus financiers",
+          "Assistant de clôture comptable",
+          "Analyse de données d'assurance",
+          "Rapports de conformité AMF automatisés"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:   #F7F5F0;
+      --white:   #FDFCFA;
+      --ink:     #1A1916;
+      --ink-mid: #5A5852;
+      --ink-lt:  #9A968E;
+      --navy:    #1B3A5C;
+      --teal:    #0F6E56;
+      --teal-lt: #E0F0EB;
+      --gold:    #A67C3A;
+      --rule:    #E0DDD6;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.25rem 3rem;
+      background: rgba(247, 245, 240, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--teal); }
+    .nav-contact {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .nav-contact:hover { color: var(--teal); border-color: var(--teal); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 8rem 3rem 5rem;
+      max-width: 1100px; margin: 0 auto;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 2rem;
+      display: flex; align-items: center; gap: 1rem;
+      opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+    .hero-eyebrow::after {
+      content: ''; display: block;
+      width: 40px; height: 1px;
+      background: var(--teal);
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(4.5rem, 12vw, 9rem);
+      font-weight: 300;
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      color: var(--navy);
+      margin-bottom: 0.15em;
+      opacity: 0; animation: fadeUp 0.9s ease 0.35s forwards;
+    }
+    .hero-title em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--teal);
+    }
+    .hero-rule {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, var(--navy) 0%, transparent 70%);
+      margin: 2rem 0;
+      opacity: 0; animation: fadeIn 0.8s ease 0.55s forwards;
+    }
+    .hero-sub {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 3vw, 1.9rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink-mid);
+      max-width: 620px;
+      line-height: 1.45;
+      margin-bottom: 3rem;
+      opacity: 0; animation: fadeUp 0.8s ease 0.65s forwards;
+    }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      padding: 0.9rem 2.2rem;
+      background: var(--navy);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
+      opacity: 0; animation: fadeUp 0.8s ease 0.8s forwards;
+    }
+    .hero-cta:hover { background: var(--teal); transform: translateY(-1px); }
+    .hero-cta svg { width: 14px; height: 14px; }
+
+    /* SECTION BASE */
+    section {
+      padding: 7rem 3rem;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+    .section-title em { font-style: italic; color: var(--teal); }
+
+    /* DIVIDER */
+    .full-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 0 3rem;
+    }
+
+    /* PILLARS */
+    .pillars {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .pillars-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 6rem 3rem;
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0;
+      border-left: 1px solid var(--rule);
+    }
+    .pillar {
+      padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.25s;
+    }
+    .pillar:hover { background: var(--teal-lt); }
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--rule);
+      line-height: 1;
+      margin-bottom: 1.25rem;
+    }
+    .pillar-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+    .pillar-text {
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      line-height: 1.75;
+    }
+    .pillar-tag {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal);
+      border-bottom: 1px solid var(--teal);
+      padding-bottom: 1px;
+    }
+
+    /* ABOUT */
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .about-text p {
+      font-size: 0.93rem;
+      color: var(--ink-mid);
+      margin-bottom: 1.2rem;
+      line-height: 1.8;
+    }
+    .about-text strong {
+      color: var(--navy);
+      font-weight: 500;
+    }
+    .credentials {
+      border-top: 2px solid var(--navy);
+      padding-top: 2rem;
+    }
+    .cred-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: flex-start;
+    }
+    .cred-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      flex-shrink: 0;
+      margin-top: 0.55rem;
+    }
+    .cred-text {
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      line-height: 1.5;
+    }
+    .cred-text strong {
+      display: block;
+      font-weight: 500;
+      color: var(--navy);
+      font-size: 0.88rem;
+    }
+
+    /* CONTACT BAND */
+    .contact-band {
+      background: var(--navy);
+      padding: 6rem 3rem;
+    }
+    .contact-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .contact-copy h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .contact-copy h2 em { font-style: italic; color: #9FE1CB; }
+    .contact-copy p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      max-width: 440px;
+      line-height: 1.7;
+    }
+    .contact-email {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      padding: 1rem 2.5rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: background 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .contact-email:hover {
+      background: var(--teal);
+      border-color: var(--teal);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111210;
+      padding: 2.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+    }
+    .footer-logo span { color: #0F6E56; }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.06em;
+    }
+    .footer-links {
+      display: flex; gap: 1.5rem;
+    }
+    .footer-links a {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #0F6E56; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero { padding: 7rem 1.5rem 4rem; }
+      section { padding: 4.5rem 1.5rem; }
+      .pillars-inner { padding: 4rem 1.5rem; }
+      .full-rule { margin: 0 1.5rem; }
+      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .contact-band { padding: 4rem 1.5rem; }
+      .contact-inner { flex-direction: column; align-items: flex-start; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .pillars-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="nav-logo">Voûte <span>IA</span></a>
+  <a href="mailto:chantalbrodeurcpa@gmail.com" class="nav-contact">Nous écrire</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">IA privée souveraine · Québec, Canada</p>
+  <h1 class="hero-title">Voûte<br><em>IA</em></h1>
+  <div class="hero-rule"></div>
+  <p class="hero-sub">L'intelligence artificielle qui reste dans vos murs — et nulle part ailleurs.</p>
+  <a href="mailto:chantalbrodeurcpa@gmail.com" class="hero-cta">
+    Prendre contact
+    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M1 7h12M8 2l5 5-5 5"/>
+    </svg>
+  </a>
+</div>
+
+<!-- PILLARS -->
+<div class="pillars">
+  <div class="pillars-inner">
+    <p class="section-label">Notre engagement</p>
+    <h2 class="section-title">Trois principes.<br><em>Non négociables.</em></h2>
+    <div style="height:3rem"></div>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-title">Privée</div>
+        <p class="pillar-text">Vos données financières, vos dossiers d'assurés, vos stratégies internes ne quittent jamais votre infrastructure. Pas de nuage. Pas d'internet. Pas de tiers. L'IA tourne sur vos propres données d'entreprise, sur votre matériel, sous votre contrôle exclusif.</p>
+        <span class="pillar-tag">Zéro transfert de données</span>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-title">Souveraine</div>
+        <p class="pillar-text">Voûte IA est déployée sur votre infrastructure — ou sur un serveur dédié canadien sous votre contrôle. Conforme à la Loi 25 par architecture, pas seulement par politique. Vos auditeurs et partenaires peuvent l'inspecter à tout moment.</p>
+        <span class="pillar-tag">Conforme Loi 25 · AMF</span>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-title">Spécialisée</div>
+        <p class="pillar-text">Un modèle entraîné sur votre secteur — comptabilité, terminologie réglementaire québécoise, processus financiers et opérationnels propres à votre industrie. Pas un outil générique : un expert de votre domaine, disponible à toute heure, qui pense comme votre équipe.</p>
+        <span class="pillar-tag">PME · Industriel · Institutionnel</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <div class="about-inner">
+    <div>
+      <p class="section-label">La fondatrice</p>
+      <h2 class="section-title"><em>Chantal Brodeur CPA</em></h2>
+      <div class="about-text">
+        <p>CPA avec <strong>25 ans d'expérience</strong> dans des secteurs variés — assurance, production cinématographique, machinerie agricole, production alimentaire, construction et commerce de détail — Chantal Brodeur CPA a bâti son expertise financière au contact des réalités concrètes des entreprises québécoises.</p>
+        <p>Contrôleur dans plusieurs environnements d'affaires exigeants, elle a compris avant les autres que l'IA allait transformer les processus financiers — et que les PME, les entreprises industrielles et les institutions n'avaient pas d'outil qui respecte leurs contraintes réelles et la confidentialité de leurs données.</p>
+        <p>Voûte IA est née de cette conviction : <strong>toutes les organisations méritent une IA à leur hauteur</strong>, construite par quelqu'un qui connaît leurs exigences de l'intérieur.</p>
+      </div>
+    </div>
+    <div class="credentials">
+      <div class="cred-item">
+        <div class="cred-dot"></div>
+        <div class="cred-text">
+          <strong>CPA — Comptable Professionnelle Agréée</strong>
+          25 ans d'expérience en comptabilité, finance et contrôle
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-dot"></div>
+        <div class="cred-text">
+          <strong>Secteurs variés · Multi-industrie</strong>
+          Assurance, production cinématographique, machinerie agricole, alimentation, construction, commerce de détail
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-dot"></div>
+        <div class="cred-text">
+          <strong>Automatisation et processus d'affaires</strong>
+          Conception de solutions IA appliquées aux flux financiers réglementés
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-dot"></div>
+        <div class="cred-text">
+          <strong>Expertise Loi 25</strong>
+          Architecture de systèmes conformes par conception, non par politique
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-dot"></div>
+        <div class="cred-text">
+          <strong>Montréal, Québec, Canada</strong>
+          Fondatrice de Voûte IA · 2026
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="full-rule">
+
+<!-- CONTACT BAND -->
+<div class="contact-band">
+  <div class="contact-inner">
+    <div class="contact-copy">
+      <h2>Votre industrie est<br><em>prête pour ça.</em></h2>
+      <p>Voûte IA est en phase de développement précoce. Nous rencontrons les PME, les directions financières, les cabinets comptables et toute organisation qui veut être parmi les premiers à bénéficier d'une IA vraiment privée — quelle que soit leur industrie.</p>
+    </div>
+    <a href="mailto:chantalbrodeurcpa@gmail.com" class="contact-email">
+      Écrire à l'équipe
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M1 7h12M8 2l5 5-5 5"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Voûte <span>IA</span></div>
+  <div class="footer-copy">© 2026 Voûte IA · Montréal, Québec</div>
+  <div class="footer-links">
+    <a href="mailto:chantalbrodeurcpa@gmail.com">Contact</a>
+    <a href="#">Confidentialité</a>
+  </div>
+</footer>
+
+</body>
+</html>
